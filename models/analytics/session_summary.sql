@@ -15,14 +15,13 @@ session_timestamp as (
 final as (
 
     select
-        DATE || '_' || CITY as SESSIONID,
-        DATE,
-        TEMP_MAX,
-        TEMP_MIN,
-        PRECIPITATION,
-        WEATHER_CODE,
-        CITY
-    from user_session_channel
+        usc.sessionId,
+        usc.userId,
+        usc.channel,
+        st.ts
+    from user_session_channel usc
+    left join session_timestamp st
+        on usc.sessionId = st.sessionId
 
 )
 

@@ -1,7 +1,7 @@
 with source_data as (
 
     select *
-    from RAW.WEATHER_DATA
+    from RAW.SESSION_TIMESTAMP
 
 )
 

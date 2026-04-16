@@ -3,7 +3,7 @@
 {{
     config(
       target_schema='snapshots',
-      unique_key='SESSIONID',
+      unique_key='sessionId',
       strategy='check',
       check_cols='all'
     )

@@ -3,7 +3,7 @@ version: 2
 models:
   - name: session_summary
     columns:
-      - name: SESSIONID
+      - name: sessionId
         data_tests:
           - not_null
           - unique
